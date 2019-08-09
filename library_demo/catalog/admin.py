@@ -4,6 +4,7 @@ from .models import Author, Genre, Book, Language, BookInstance
 class BooksInstanceInline(admin.StackedInline):
 	model = BookInstance
 	extra = 1
+	addition = 20
 	subs = 'updated string'
 	
 #admin.site.register(Book)
@@ -18,6 +19,7 @@ class BookAdmin(admin.ModelAdmin):
 class BooksInline(admin.StackedInline):
 	model = Book
 	extra = 1
+	addition = 1
 
 #admin.site.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
